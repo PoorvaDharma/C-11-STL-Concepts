@@ -1,0 +1,13 @@
+By default Priority queue is sorted in decreasing order. If a different order is needed a comparator predecate is to defined.
+
+ex  priority_queue<ListNode *, vector<ListNode *>, comp> pq;
+
+struct comp
+{
+    bool operator() (const ListNode *p,const ListNode *q)
+    {
+        return p.val>q.val;
+    }
+}
+
+The comparator operator fills the container in reverse order, in this case the largest element is placed at last.
