@@ -1,0 +1,20 @@
+The list::splice() is a built-in function in C++ STL which is used to transfer elements from one list to another. 
+The splice() function can be used in three ways:
+
+1. Transfer all the elements of list x into another list at some position.
+2. Transfer only the element pointed by i from list x into the list at some position.
+3. Transfers the range [first, last) from list x into another list at some position.
+
+
+list1.splice (iterator position List1, list2)
+                or 
+list1.splice (iterator position List1, list2, iterator of list2)
+                or 
+list1.splice (iterator position List1, list2, iterator first of list2, iterator last of list2)
+
+
+#This can be used to splice a single list also like so
+
+  l1.splice(l.begin(),l1,it(to some element in l1))
+ 
+ removes an element from position it and adds it to the begining.
