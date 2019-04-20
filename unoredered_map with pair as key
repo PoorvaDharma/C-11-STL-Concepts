@@ -1,0 +1,12 @@
+unordered maps typically stores <key,value> pair using hashmap where key acts as the unique hash value.
+If we want to store a key as pair, there is no way that it could be deduced as an unique value. 
+In order to store key as pair<int,int>, we need to provide a hash fucntion that the pair can be converted to unique interger.
+
+
+ex: unordered_map<pair<int,int>,int,myhash> slopes;
+
+struct myhash {
+        size_t operator()(const pair<int,int>& p) const {
+            return (p.first ^ p.second);                     >> pair computes to single value that can be used as a key
+        }
+    };
